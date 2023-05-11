@@ -49,7 +49,7 @@ const Equipo = () => {
               </div>
               <div class="text-secondary flex-1 p-6">
               
-                  <h4 class="font-principal text-2xl drop-shadow-xl">{equipo.name}</h4>
+                  <h4 class="font-principal text-[#C2391B] text-2xl drop-shadow-xl">{equipo.name}</h4>
                 
                 <p class="font-principal text-3xl text-[#C2391B] drop-shadow-lg opcacity-60 mb-3">{equipo.rol}</p>
               </div>
