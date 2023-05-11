@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter,RouterProvider} from "react-router-dom";
+import { createHashRouter,RouterProvider} from "react-router-dom";
 import "./index.css";
 import Home from "./components/Home";
 
@@ -32,7 +32,7 @@ import History from "./components/History";
 
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element:<Home/>
