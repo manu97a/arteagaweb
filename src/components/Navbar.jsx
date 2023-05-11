@@ -23,7 +23,6 @@ const Navbar = () => {
           <Link to={"/Productos"}>Productos</Link>
           </li>
         <li className='p-4'><Link to={"/historia"}>Historia</Link></li>
-        <li className='p-4'>Nosotros</li>
         <li className='p-4'><Link to={"/contacto"}>Contacto</Link></li>
       </ul>
       <div onClick={handleNav} className='block md:hidden'>
@@ -38,7 +37,6 @@ const Navbar = () => {
           <Link to={"/Productos"}>Productos</Link>
           </li>
           <li className='p-4 border-b border-white'><Link to={"/historia"}>Historia</Link></li>
-          <li className='p-4 border-b border-white'>Nosotros</li>
           <li className='p-4 border-b border-white'><Link to={"/contacto"}>Contacto</Link></li>
       </ul>
     </div>

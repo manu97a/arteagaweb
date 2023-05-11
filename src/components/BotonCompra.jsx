@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect, useState }  from "react";
 import { Link } from "react-router-dom";
 
-const BotonCompra = (props) => {
-  const text = "Hola estoy interesado en comprar el instrumento del siguiente link " + props.porComprar;
+
+const BotonCompra = () => {
+  const [url, setUrl] = useState('');
+
+  useEffect(() => {
+    const currentUrl = window.location.href;
+    setUrl(currentUrl);
+  }, []);
+  const text = "Hola, estoy interesado en comprar el instrumento del siguiente link:  " + url;
   return (
     <div className="container mx-auto">
         <Link
@@ -12,6 +19,7 @@ const BotonCompra = (props) => {
         >
         Comprar
         </Link>
+        
     </div>
   );
 };
