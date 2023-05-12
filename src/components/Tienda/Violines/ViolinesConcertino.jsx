@@ -51,35 +51,7 @@ const ViolinesConcertino = () => {
       <h2 className="mt-10 text-4xl text-center text-[#C2391B] font-principal tracking-tight">
         Violines Concertino
       </h2>
-      {/* <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 border-2">
-        {concertinos.map((concertino) => (
-          <div key={concertino.id} className="group relative">
-            <div className="mx-auto h-[500px] aspect-h-1 aspect-w-1 overflow-hidden rounded-md border-2 bg-gray-200 lg:aspect-none group-hover:animate-pulse lg:max-h-100 ">
-              <img
-                src={concertino.imageSrc}
-                alt={concertino.imageAlt}
-                className="w-1/2 mx-auto"
-              />
-            </div>
-            <div className="mt-4 flex justify-between">
-              <div>
-                <h3 className="text-sm font-principal text-gray-700">
-                  <Link to={concertino.href}>
-                    <span aria-hidden="true" className="absolute inset-0" />
-                    {concertino.name}
-                  </Link>
-                </h3>
-                <p className="mt-1 text-sm font-principal text-[#C2391B]">
-                  {concertino.color}
-                </p>
-              </div>
-              <p className="text-sm font-medium text-gray-900">
-                {concertino.price}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div> */}
+
       <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 border-2">
         {concertinos.map((concertino) => (
           <div key={concertino.id} className="group relative">
@@ -109,7 +81,6 @@ const ViolinesConcertino = () => {
           </div>
         ))}
       </div>
-      
     </div>
   );
 };

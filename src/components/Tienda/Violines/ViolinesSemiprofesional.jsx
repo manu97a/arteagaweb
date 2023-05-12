@@ -58,10 +58,10 @@ const ViolinesSemiprofesional = () => {
               <img
                 src={semiprofesinal.imageSrc}
                 alt={semiprofesinal.imageAlt}
-                className="object-cover object-center w-1/2"
+                className="mx-auto w-auto"
               />
             </div>
-            <div className="mt-4 flex justify-between">
+            <div className="mt-4 flex flex-col justify-between">
               <div>
                 <h3 className="text-sm font-principal text-gray-700">
                   <Link to={semiprofesinal.href}>

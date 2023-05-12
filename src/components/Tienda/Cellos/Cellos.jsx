@@ -33,14 +33,14 @@ const Cellos = () => {
     <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
               {cellos.map((cello) => (
                 <div key={cello.id} className="group relative">
-                  <div className="h-[500px] aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:animate-pulse lg:max-h-100">
+                  <div className="h-[500px] aspect-h-1 aspect-w-1 overflow-hidden border-2 bg-gray-200 lg:aspect-none group-hover:animate-pulse lg:max-h-100 justify-center items-center ">
                     <img
                       src={cello.imageSrc}
                       alt={cello.imageAlt}
-                      className="object-cover object-center w-1/2"
+                      className="mx-auto w-auto"
                     />
                   </div>
-                  <div className="mt-4 flex justify-between">
+                  <div className="mt-4 flex flex-col justify-between">
                     <div>
                       <h3 className="text-sm font-principal text-gray-700">
                         <Link to={cello.href}>

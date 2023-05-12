@@ -77,10 +77,10 @@ const ViolinesProfesionales = () => {
               <img
                 src={profesional.imageSrc}
                 alt={profesional.imageAlt}
-                className="object-cover object-center w-1/2"
+                className="mx-auto w-auto"
               />
             </div>
-            <div className="mt-4 flex justify-between">
+            <div className="mt-4 flex flex-col justify-between">
               <div>
                 <h3 className="text-sm font-principal text-gray-700">
                   <Link to={profesional.href}>

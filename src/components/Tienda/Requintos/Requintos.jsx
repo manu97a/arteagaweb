@@ -16,14 +16,14 @@ const Requintos = () => {
     <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
       {requintos.map((requinto) => (
         <div key={requinto.id} className="group relative">
-          <div className="min-h-200 aspect-h-1 aspect-w-1 w-1/2 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:animate-pulse lg:h-100">
+          <div className="h-[500px] aspect-h-1 aspect-w-1 overflow-hidden border-2 bg-gray-200 lg:aspect-none group-hover:animate-pulse lg:max-h-100 justify-center items-center ">
             <img
               src={requinto.imageSrc}
               alt={requinto.imageAlt}
-              className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+              className="mx-auto w-auto"
             />
           </div>
-          <div className="mt-4 flex justify-between">
+          <div className="mt-4 flex flex-col justify-between">
             <div>
               <h3 className="text-sm font-principal text-gray-700">
                 <a href={requinto.href}>
