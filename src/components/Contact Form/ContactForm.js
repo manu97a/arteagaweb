@@ -10,8 +10,7 @@ function ContactForm() {
     const [result,showResult] = useState(false);
     let bot = {
         TOKEN:"5881491856:AAEdcGhbwgduLP5Yse3UM6eRaP5R-6R7jwM",
-        // chatID:"1189743186",
-        chatID:"6075665861", //agusto id
+        chatID:"6075665861",
     }
     async function sendContacttoTelegram(event){
         event.preventDefault();
