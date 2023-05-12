@@ -9,7 +9,7 @@ const BotonCompra = () => {
     const currentUrl = window.location.href;
     setUrl(currentUrl);
   }, []);
-  const text = "Hola, estoy interesado en comprar el instrumento del siguiente link:  " + url;
+  const text = "Hola, estoy interesado en comprar el instrumento del siguiente link:" + url;
   return (
     <div className="container mx-auto">
         <Link
