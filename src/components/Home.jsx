@@ -7,6 +7,8 @@ import AboutUs from "./AboutUs";
 import Equipo from "./Equipo";
 import Footer from "./Footer";
 import ScrollTop from "./ScrollTop";
+
+
 const Home = () => {
   return (
     <div>

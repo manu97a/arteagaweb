@@ -1,5 +1,6 @@
 import React from "react";
 import RequintoMixto from "../../../assets/productos/Requintos/Requinto Mixto/Principal.png";
+import { motion } from "framer-motion";
 const requintos = [
   {
     id: 1,
@@ -15,7 +16,14 @@ const Requintos = () => {
   return (
     <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
       {requintos.map((requinto) => (
-        <div key={requinto.id} className="group relative">
+        <motion.div initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ delay: 0.3, duration: 1 }}
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0 },
+        }} key={requinto.id} className="group relative">
           <div className="h-[500px] aspect-h-1 aspect-w-1 overflow-hidden border-2 bg-gray-200 lg:aspect-none group-hover:animate-pulse lg:max-h-100 justify-center items-center ">
             <img
               src={requinto.imageSrc}
@@ -37,7 +45,7 @@ const Requintos = () => {
             </div>
             <p className="text-sm font-medium text-gray-900">{requinto.price}</p>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

@@ -3,28 +3,52 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import ScrollTop from "./ScrollTop";
 import GoBack from "./Extras/GoBack";
-import { Link , useLocation} from "react-router-dom";
-import ContactForm from './Contact Form/ContactForm'
-
+import { Link, useLocation } from "react-router-dom";
+import ContactForm from "./Contact Form/ContactForm";
+import { motion } from "framer-motion";
 import { BiWorld } from "react-icons/bi";
 import { BsWhatsapp } from "react-icons/bs";
 import { FiMapPin } from "react-icons/fi";
 
 const ContactUs = () => {
   const rutaActual = useLocation();
-  
+
   return (
     <ScrollTop>
       <Navbar />
       <GoBack />
       <div className="container max-w-full mx-auto bg-gray-100 p-2 font-principal">
         <div class="container my-24 px-6 mx-auto">
-          <h1 className="text-4xl text-center text-[#C2391B] font-principal tracking-tight pb-8">
+          <motion.h1
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.9 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            className="text-4xl text-center text-[#C2391B] font-principal tracking-tight pb-8"
+          >
             Contactos
-          </h1>
-          <p className="text-xl text-center py-3 text-gray-900 font-principal tracking-tight">
-            Puedes contactarnos para cualquier duda o consulta relacionada con la fabricación y restauración de instrumentos de cuerda. Estaremos en contacto lo más pronto posible y encantados de responder tus preguntas y brindarte la información que necesitas para obtener el mejor sonido de tu instrumento. ¡No dudes en contactarnos! Estamos aquí para ayudarte en todo lo que necesites.
-          </p>
+          </motion.h1>
+          <motion.p
+          initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.2, duration: 1 }}
+            variants={{
+              hidden: { opacity: 0, x: 50 },
+              visible: { opacity: 1, x: 0 },
+            }} className="text-xl text-center py-3 text-gray-900 font-principal tracking-tight"
+          >
+            Puedes contactarnos para cualquier duda o consulta relacionada con
+            la fabricación y restauración de instrumentos de cuerda. Estaremos
+            en contacto lo más pronto posible y encantados de responder tus
+            preguntas y brindarte la información que necesitas para obtener el
+            mejor sonido de tu instrumento. ¡No dudes en contactarnos! Estamos
+            aquí para ayudarte en todo lo que necesites.
+          </motion.p>
           <section class="mb-32 text-gray-800">
             <div class="relative overflow-hidden bg-no-repeat bg-cover extraclass2 rounded-xl"></div>
             <div class="container text-gray-800 px-4 md:px-12">

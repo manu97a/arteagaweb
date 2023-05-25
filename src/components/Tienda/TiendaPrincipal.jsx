@@ -7,7 +7,7 @@ import Violines from "./Violines/Violines";
 import Guitarras from "./Guitarras/Guitarras";
 import ScrollTop from "../ScrollTop";
 import GoBack from "../Extras/GoBack";
-
+import { motion } from "framer-motion";
 const TiendaPrincipal = () => {
   return (
     /*  */
@@ -18,10 +18,30 @@ const TiendaPrincipal = () => {
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
           <GoBack />
           <div className="text-center">
-            <h1 className="text-4xl text-center text-[#C2391B] font-principal tracking-tight">
+            <motion.h1
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.3, duration: 1 }}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              className="text-4xl text-center text-[#C2391B] font-principal tracking-tight"
+            >
               Productos
-            </h1>
-            <p className="text-xl text-center py-3 text-gray-900 font-principal tracking-tight">
+            </motion.h1>
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.3, duration: 1 }}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              className="text-xl text-center py-3 text-gray-900 font-principal tracking-tight"
+            >
               El taller de lutheria a cargo de César Augusto Arteaga Vera
               expresa que: todos los productos presentados a continuación
               incluyen todos los detalles presentados en las descripciones de
@@ -30,30 +50,60 @@ const TiendaPrincipal = () => {
               En caso de requerir alguna personalización, cambio de cuerdas o
               acabado el precio cambiará para lo cual dejamos nuestras redes
               sociales y líneas de contacto directa para facilitar el proceso de
-              fabrcicación personalizada del instrumento.
+              fabricación personalizada del instrumento.
               <div class="relative flex py-5 items-center"></div>
               <p className="text-[#C2391B]">
-              El precio de los instrumentos no incluye el valor de envío nacional o internacional
-
+                El precio de los instrumentos no incluye el valor de envío
+                nacional o internacional
               </p>
-              
-            </p>
+            </motion.p>
             <div class="relative flex py-5 items-center"></div>
-            <h1 className="text-4xl text-center text-[#C2391B] font-principal tracking-tight">
+            <motion.h1
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.5, duration: 1 }}
+              variants={{
+                hidden: { opacity: 0, x: 50 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              className="text-4xl text-center text-[#C2391B] font-principal tracking-tight"
+            >
               Cellos
-            </h1>
+            </motion.h1>
             <Cellos></Cellos>
-            <h1 className="mt-10 text-4xl text-center text-[#C2391B] font-principal tracking-tight">
+            <motion.h1 initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.5, duration: 1 }}
+              variants={{
+                hidden: { opacity: 0, x: 50 },
+                visible: { opacity: 1, x: 0 },
+              }} className="mt-10 text-4xl text-center text-[#C2391B] font-principal tracking-tight">
               Requintos
-            </h1>
+            </motion.h1>
             <Requintos></Requintos>
-            <h1 className="mt-10 text-4xl text-center text-[#C2391B] font-principal tracking-tight">
+            <motion.h1 initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.5, duration: 1 }}
+              variants={{
+                hidden: { opacity: 0, x: 50 },
+                visible: { opacity: 1, x: 0 },
+              }} className="mt-10 text-4xl text-center text-[#C2391B] font-principal tracking-tight">
               Violines
-            </h1>
+            </motion.h1>
             <Violines></Violines>
-            <h1 className="mt-10 text-4xl text-center text-[#C2391B] font-principal tracking-tight">
+            <motion.h1 initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.5, duration: 1 }}
+              variants={{
+                hidden: { opacity: 0, x: 50 },
+                visible: { opacity: 1, x: 0 },
+              }} className="mt-10 text-4xl text-center text-[#C2391B] font-principal tracking-tight">
               Guitarras
-            </h1>
+            </motion.h1>
             <Guitarras />
           </div>
         </div>

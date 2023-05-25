@@ -5,6 +5,8 @@ import Concertino2 from "../../../assets/productos/Violines/Violin Concertino/vi
 import Concertino3 from "../../../assets/productos/Violines/Violin Concertino/v concertino 3/Principal.png";
 import Cabezacaballo from "../../../assets/productos/Violines/Violin Concertino/violin cabeza de caballo/Principal.png";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 const concertinos = [
   {
     id: 1,
@@ -48,13 +50,31 @@ const concertinos = [
 const ViolinesConcertino = () => {
   return (
     <div>
-      <h2 className="mt-10 text-4xl text-center text-[#C2391B] font-principal tracking-tight">
+      <motion.h2 initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        variants={{
+          hidden: { opacity: 0, x: 50 },
+          visible: { opacity: 1, x: 0 },
+        }} className="mt-10 text-4xl text-center text-[#C2391B] font-principal tracking-tight">
         Violines Concertino
-      </h2>
+      </motion.h2>
 
       <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 border-2">
         {concertinos.map((concertino) => (
-          <div key={concertino.id} className="group relative">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.3, duration: 1 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            key={concertino.id}
+            className="group relative"
+          >
             <div className="h-[500px] aspect-h-1 aspect-w-1 overflow-hidden border-2 bg-gray-200 lg:aspect-none group-hover:animate-pulse lg:max-h-100 justify-center items-center ">
               <img
                 src={concertino.imageSrc}
@@ -78,7 +98,7 @@ const ViolinesConcertino = () => {
                 {concertino.price}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

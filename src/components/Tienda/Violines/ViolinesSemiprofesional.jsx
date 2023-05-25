@@ -6,6 +6,8 @@ import Semiprofesional1 from "../../../assets/productos/Violines/Violin Semiprof
 import Semiprofesional2 from "../../../assets/productos/Violines/Violin Semiprofesional/violin 2/Principal.png";
 import Semiprofesional3 from "../../../assets/productos/Violines/Violin Semiprofesional/violin 3/Principal.png";
 import Semiprofesional4 from "../../../assets/productos/Violines/Violin Semiprofesional/violin 4/Principal.png";
+
+import { motion } from "framer-motion";
 // ----------------------------
 const semiprofesionales = [
   {
@@ -48,12 +50,33 @@ const semiprofesionales = [
 const ViolinesSemiprofesional = () => {
   return (
     <div>
-      <h2 className="mt-10 text-4xl text-center text-[#C2391B] font-principal tracking-tight">
+      <motion.h2
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        variants={{
+          hidden: { opacity: 0, x: 50 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        className="mt-10 text-4xl text-center text-[#C2391B] font-principal tracking-tight"
+      >
         Violines Semiprofesionales
-      </h2>
+      </motion.h2>
       <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 border-2">
         {semiprofesionales.map((semiprofesinal) => (
-          <div key={semiprofesinal.id} className="group relative">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.3, duration: 1 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            key={semiprofesinal.id}
+            className="group relative"
+          >
             <div className="h-[500px] aspect-h-1 aspect-w-1 overflow-hidden rounded-md border-2 bg-gray-200 lg:aspect-none group-hover:animate-pulse lg:max-h-100">
               <img
                 src={semiprofesinal.imageSrc}
@@ -77,7 +100,7 @@ const ViolinesSemiprofesional = () => {
                 {semiprofesinal.price}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
