@@ -57,26 +57,22 @@ const Equipo = () => {
         Lutieres de amplia experiencia en la elaboración a mano de instrumentos
         musicales de cuerda frotada y pulsada.
       </motion.p>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ delay: 0.3, duration: 1 }}
-        variants={{
-          hidden: { opacity: 0, y: 50 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        className="container mx-auto"
-      >
+      <div className="container mx-auto">
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-3">
           {equipoTrabajo.map((equipo) => (
-            <div className="shadow-card flex flex-col rounded-xl bg-white bg-clip-border">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.3, duration: 1 }}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              className="shadow-card flex flex-col rounded-xl bg-white bg-clip-border"
+            >
               <div class="mx-4 -mt-6 translate-y-0">
-                <motion.img
-                  viewport={{ once: true, amount: 0.5 }}
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 1 }}
+                <img
                   class="w-auto rounded-lg"
                   src={equipo.imageSrc}
                   alt={equipo.imageAlt}
@@ -91,10 +87,10 @@ const Equipo = () => {
                   {equipo.rol}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
