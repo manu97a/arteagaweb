@@ -47,7 +47,7 @@ const Equipo = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
-        transition={{ delay: 1.8, duration: 0.9 }}
+        transition={{ delay: 0.5, duration: 0.9 }}
         variants={{
           hidden: { opacity: 0, y: 50 },
           visible: { opacity: 1, y: 0 },
